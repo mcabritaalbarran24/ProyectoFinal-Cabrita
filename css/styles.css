@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive; /* Fuente estilo retro para videojuegos */
+}
+
+body {
+    background-color: #000; 
+    color: #d7d700; 
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px; 
+    margin-bottom: 50px; 
+}
+
+/* Estilos para el logo en la barra de navegación */
+.navbar-brand img {
+    max-width: 200px; /* Ajusta el tamaño  */
+    height: auto;
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+.nav-link {
+    color: #d7d700; /* Enlaces en amarillo dorado */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Transición suave */
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #fff; /* Blanco al pasar el raton */
+    text-decoration: none;
+    background-color: rgb(10, 10, 60);
+    padding: 10px;
+}
+
+.nav-link:active {
+    background-color: yellow;
+    color: black;
+}
+
+.nav-link:visited {
+    background-color: darkslategrey;
+    color: #999;
+}
+
+.main {
+    padding: 20px;
+    background-color: #202020; /* Fondo gris oscuro para el contenido principal */
+    margin-bottom: 20px; /* Espacio debajo del contenido principal */
+}
+
+.section {
+    border: 2px dashed #d7d700; /* Bordes dorados */
+    padding: 20px;
+    margin-bottom: 20px; 
+    background-color: #111; /* Fondo negro para las secciones */
+}
+
+.section__title, .main__subtitle {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: #d7d700;
+    text-shadow: 1px 1px #000, 2px 2px #d7d700; /* Sombra doble */
+}
+
+.section__text, .section__subtitle {
+    text-indent: 20px;
+}
+
+.section__list {
+    padding-left: 20px;
+}
+
+.section__list-item {
+    margin-bottom: 10px;
+}
+
+.section__video {
+    display: block;
+    margin: 20px auto;
+    width: 100%; /* Ajuste completo del ancho */
+}
+
+.main__image {
+    display: block; /*  como un bloque y se centre */
+    max-width: 30%; /* Ajuste del tamaño de la imagen */
+    height: auto; /* Altura automática  */
+    border: 10px dashed #d7d700; /* Borde dorado alrededor de las imágenes */
+    margin: 20px auto; /* Centrar la imagen y espacio alrededor */
+}
+
+.footer {
+    background-color: #333; /* Gris oscuro para el pie de página */
+    color: #d7d700;
+    text-align: center;
+    padding: 5px 0; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px dashed #d7d700; /* Borde dorado en la parte superior del pie de página */
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+    left: 0;
+}
+
+.footer__text {
+    margin: 0;
+}
+
+.footer__redes {
+    margin-top: 10px;
+}
+
+.footer__redes-link,
+.redes a {
+    color: #d7d700; /* Color de los iconos */
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+
+/* Estilo para la línea de tiempo */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 40px; 
+    padding: 20px;
+    align-items: center; 
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 2fr 3fr; 
+    align-items: center;
+    gap: 40px;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border: 5px dashed #d7d700; /* Borde dorado alrededor de las imágenes */
+    margin: 0;
+}
+
+.timeline-content {
+    background-color: #111; /* Fondo negro para las secciones de texto */
+    border: 2px dashed #d7d700; /* Bordes dorados */
+    padding: 20px;
+}
+
+.item:nth-child(odd) {
+    background-color: #333;
+}
+
+.item:nth-child(even) {
+    background-color: #444;
+}
+
+.top-juegos,
+.top-juegos__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.top-juegos__item {
+    flex: 1 1 100%; /* ajustar esto para cambiar el tamaño de los ítems */
+    padding: 10px;
+    border: 1px dashed #d7d700;
+    margin: 5px;
+    text-align: center;
+}
+
+/* Estilos para la galería */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border: 2px dashed #d7d700;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, rgb(11, 10, 10), rgb(238, 193, 12));
+}
+
+.gallery-item h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Estilos específicos para la galería de arte */
+.gallery-item-arte {
+    display: block; 
+    max-width: 30%; 
+    height: auto; 
+    margin: 20px auto; 
+    animation-duration: 1s; /* Duración de la animación */
+    animation-fill-mode: both; /* Asegura que la animación mantenga el estado final */
+}
+
+
+.gallery-item-text {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    color: #fff; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto */
+}
+
+.gallery-item-text h3 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.gallery-item-text p {
+    margin: 0; /* Eliminar márgenes para el párrafo */
+}
